@@ -1,0 +1,11 @@
+services:
+  postgresql:
+    container_name: librarydb
+    build: .docker/postgresql
+    environment:
+      POSTGRES_DB: librarydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: root
+    ports:
+      - 5432:5432
+    profiles: [dev]
